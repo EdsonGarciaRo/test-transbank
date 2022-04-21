@@ -1,0 +1,22 @@
+# server
+server:
+    enabled: true
+    port: 8733
+
+# spring
+spring:
+  spring:
+    h2.console.enabled: true
+  datasource:
+    hikari:
+      maximum-pool-size: 3
+      minimum-idle: 1
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:test
+    username: test
+    password: 123456
+    jpa:
+      database-platform: 'org.hibernate.dialect.PostgreSQL9Dialect'
+      hibernate.ddl-auto: none
+      properties.hibernate.temp.use_jdbc_metadata_defaults: false
+      open-in-view: false

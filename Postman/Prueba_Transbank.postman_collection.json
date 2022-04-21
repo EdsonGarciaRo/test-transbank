@@ -1,0 +1,50 @@
+{
+	"info": {
+		"_postman_id": "3dc3fc02-5696-4e46-9d9d-1c883735f9cf",
+		"name": "Prueba_Transbank",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8733/authorization/register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "a",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Juan Rodriguez\",\n    \"email\": \"juan@rodriguez.org\",\n    \"password\": \"Hunter21\",\n    \"phones\": [\n        {\n            \"number\": \"1234567\",\n            \"citycode\": \"1\",\n            \"contrycode\": \"57\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8733/authorization/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8733",
+					"path": [
+						"authorization",
+						"register"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
